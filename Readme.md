@@ -1,6 +1,8 @@
 # Allowance Wallet
 
-This project is an shared Wallet with allowance function
+This project is an shared Wallet with allowance function, The goal is give
+"allowance" to other, specific user-addresses (children, employees).
+![Remix Contract](./.doc/shared_wallet_contract.png)
 
 ## Getting Started
 
@@ -26,7 +28,7 @@ This project is an shared Wallet with allowance function
 
   > this will create a build folder and copy to client react.
 
-#### Migrating using an alternative GUI blockchain wiht Ganash
+#### Migrating using an alternative GUI blockchain with Ganash
 
 For that it's necessary to have [Ganash software](https://www.trufflesuite.com/ganache) installed.
 
@@ -49,6 +51,11 @@ For that it's necessary to have [Ganash software](https://www.trufflesuite.com/g
 
 - [Truffle Framework](https://www.trufflesuite.com/docs/truffle/overview)
 - [OpenZeppeline](https://github.com/OpenZeppelin/openzeppelin-contracts)
+
+## TODO
+
+[x] ~~Create Contract~~  
+[] Create App client
 
 ## Inspired by
 
