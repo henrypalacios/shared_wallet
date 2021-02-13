@@ -12,6 +12,7 @@ export const injectedConnector = new InjectedConnector({
 
 export const CONTRACT_BY_NETWORK = {
   [Networks.Rinkeby]: {
-    address: "0xEF4F6D943f1Ce766503f2763c89375E102A05780",
+    address: "0x64c75b092e34200435384c186bd49e36e743c91f",
+    etherScan: "https://rinkeby.etherscan.io/",
   },
 };

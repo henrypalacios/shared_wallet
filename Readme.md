@@ -55,7 +55,8 @@ For that it's necessary to have [Ganash software](https://www.trufflesuite.com/g
 ## TODO
 
 [x] ~~Create Contract~~  
-[] Create App client
+[x] ~~Create App client~~
+[] Send Money from wallet
 
 ## Inspired by
 

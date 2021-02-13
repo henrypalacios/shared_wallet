@@ -20,30 +20,31 @@ const MainLayout = (props) => {
 };
 
 const Home = ({ chainId }) => {
-  const { account, library } = useWeb3React();
   const contractAddress = CONTRACT_BY_NETWORK[chainId].address;
-  const contract = new Contract(
-    contractAddress,
-    WALLETABI.abi,
-    library.getSigner()
-  );
   const { data: balance, mutate } = useSWR([
     "getBalance",
     contractAddress,
     "latest",
   ]);
 
-  console.log(balance);
+  const formatBalance = (balance) => {
+    let result = null;
+
+    if (balance) {
+      result = parseFloat(formatUnits(balance)).toPrecision(3);
+    }
+    return result;
+  };
 
   return (
     <MainLayout>
       <Balance
-        balance={
-          null ? !balance : parseFloat(formatUnits(balance)).toPrecision(4)
-        }
-        address={contractAddress}
+        balance={formatBalance(balance)}
+        contractAddress={contractAddress}
+        chainId={chainId}
+        etherScan={CONTRACT_BY_NETWORK[chainId].etherScan}
       />
-      <Accounts />
+      <Accounts contractAddress={contractAddress} />
     </MainLayout>
   );
 };

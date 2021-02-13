@@ -9,12 +9,12 @@ export const fetcher = (library, abi) => (...args) => {
     const method = arg2;
     const contract = new Contract(address, abi, library.getSigner());
 
-    console.log(method, params);
+    // console.log("SWRFetcher_Contract: ", method, params);
     return contract[method](...params);
   }
   // it's a eth call
   const method = arg1;
-  console.log(method, params);
+  // console.log("SWRFetcher_eth: ", method, params);
 
   return library[method](arg2, ...params);
 };
